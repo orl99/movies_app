@@ -76,4 +76,12 @@ class Movie {
     overview          =  json['overview'];
     releaseDate       =  json['release_date'];
   }
+
+  getPosterImage() {
+    if (this.posterPath == null) {
+      return 'https://comnplayscience.eu/app/images/notfound.png';
+    } else {
+      return 'https://image.tmdb.org/t/p/w500/${this.posterPath}';
+    }
+  }
 }
